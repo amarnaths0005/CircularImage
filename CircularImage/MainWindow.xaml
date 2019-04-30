@@ -1,0 +1,37 @@
+﻿<Window x:Class="CircularImage.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="Circular View" Height="650" Width="790" WindowStartupLocation="CenterScreen"
+        Background="#666666" ResizeMode="NoResize">
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Width="150">
+            <Button x:Name="bnOpen" Margin="10" Width="100" Height="30" Click="bnOpen_Click">Open Image</Button>
+            <Separator BorderBrush="Blue" />
+            <StackPanel x:Name="parameterGrid" Height="375">
+                <Label Margin="0 2 0 0" HorizontalAlignment="Left" FontWeight="Bold" 
+                       Foreground="LightGoldenrodYellow">Inner Radius:</Label>
+                <Slider x:Name="sliderR1" Margin="10 0 10 0" Minimum="5" Maximum="30" Value="20"
+                TickFrequency="1" TickPlacement="TopLeft" ValueChanged="sliderR1_ValueChanged"></Slider>
+                <Label Margin="0 2 0 0" HorizontalAlignment="Left" FontWeight="Bold" 
+                       Foreground="LightGoldenrodYellow">Outer Radius:</Label>
+                <Slider x:Name="sliderR2" Margin="10 0 10 0" Minimum="50" Maximum="290" Value="250"
+                TickFrequency="10" TickPlacement="TopLeft" ValueChanged="sliderR2_ValueChanged"></Slider>
+                <Label Margin="0 2 0 0" HorizontalAlignment="Left" FontWeight="Bold" 
+                       Foreground="LightGoldenrodYellow">Start Angle:</Label>
+                <Slider x:Name="sliderTheta1" Margin="10 0 10 0" Minimum="0" Maximum="170" Value="25"
+                TickFrequency="10" TickPlacement="TopLeft" ValueChanged="sliderTheta1_ValueChanged"></Slider>
+                <Label Margin="0 2 0 0" HorizontalAlignment="Left" FontWeight="Bold" 
+                       Foreground="LightGoldenrodYellow">End Angle:</Label>
+                <Slider x:Name="sliderTheta2" Margin="10 0 10 0" Minimum="180" Maximum="360" Value="270"
+                TickFrequency="10" TickPlacement="TopLeft" ValueChanged="sliderTheta2_ValueChanged"></Slider>
+            </StackPanel>
+            <Separator BorderBrush="Blue" />
+            <Button x:Name="bnSaveImage" Margin="10 20" Width="100" Height="30" Click="bnSaveImage_Click">
+                Save Image</Button>
+        </StackPanel>
+        <Border Width="604" Height="604" BorderBrush="LightGoldenrodYellow" BorderThickness="2" >
+            <Image x:Name="img" Width="600" Height="600" Stretch="Uniform" VerticalAlignment="Center" 
+               HorizontalAlignment="Center" />
+        </Border>
+    </StackPanel>
+</Window>
