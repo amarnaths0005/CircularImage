@@ -8,7 +8,9 @@ Works only on Windows. Code is in C#.
 Please report issues to amarnaths.codeproject@gmail.com
 
 Screenshot
+
 ![Screenshot of Circular](https://github.com/amarnaths0005/CircularImage/blob/master/CircularScreen.png)
 
-Resulting Image
+Resulting Image for different input settings
+
 ![Resulting Image of Circular](https://github.com/amarnaths0005/CircularImage/blob/master/catGithub.png)
